@@ -1,5 +1,5 @@
 use super::*;
-impl<const U: SiUnit, DT, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit> ops::Sub
+impl<const U: SiUnitExt, DT, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit> ops::Sub
     for Quantity<U, DT, BASE, STORAGE_BASE, true>
 where
     DT: QuantityDataTraits<DT>,

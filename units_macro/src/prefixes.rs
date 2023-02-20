@@ -6,6 +6,7 @@ use syn::{
     spanned::Spanned,
     BinOp, Expr, Ident, Lit, Token,
 };
+use common_serde::exponentiate;
 
 pub struct PrefixesDef {
     aliases: Vec<Ident>,
@@ -69,27 +70,6 @@ impl Parse for PrefixesDef {
     }
 }
 
-fn exponentiate(input: &Expr) -> Result<i128> {
-    match input {
-        Expr::Binary(input) => {
-            let mut nom_parsed: i128 = parse_expr_int(&input.left)?;
-            if let BinOp::BitXor(_) = input.op {
-                let exponent_parsed = parse_expr_int(&input.right)? as u32;
-                nom_parsed = nom_parsed.pow(exponent_parsed);
-            }
-            Ok(nom_parsed)
-        }
 
-        Expr::Lit(_) => parse_expr_int(input),
-        _ => Err(syn::Error::new(input.span(), "expected int")),
-    }
-}
 
-fn parse_expr_int(input: &Expr) -> Result<i128> {
-    if let Expr::Lit(l) = input {
-        if let Lit::Int(i) = &l.lit {
-            return i.base10_parse();
-        }
-    }
-    Err(syn::Error::new(input.span(), "expected int"))
-}
+

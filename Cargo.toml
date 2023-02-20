@@ -2,7 +2,6 @@
 name = "units"
 version = "0.1.0"
 edition = "2021"
-#build = "build.rs"
 
 [profile.release]
 opt-level = 3
@@ -16,10 +15,16 @@ codegen-units = 1
 num-rational = "*"
 units_macro = {path = "./units_macro"}
 
+
 [dev-dependencies]
 criterion = "0.3"
 rand = "*"
 
+[build-dependencies]
+serde = { version = "*", features = ["derive"] }
+toml = "0.5.*"
+itertools = "*"
+common_serde = {path = "common_serde"}
 
 [[bench]]
 name = "bench_main"

@@ -1,0 +1,99 @@
+[quetta]
+aliases = ["Q"]
+numerator = "10^30"
+denominator = "1"
+
+[ronna]
+aliases = ["R"]
+numerator = "10^27"
+denominator = "1"
+
+
+[yotta]
+aliases = ["Y"]
+numerator = "10^24"
+denominator = "1"
+[zetta]
+aliases = ["Z"]
+numerator = "10^21"
+denominator = "1"
+[exa]
+aliases = ["E"]
+numerator = "10^18"
+denominator = "1"
+[peta]
+aliases = ["P"]
+numerator = "10^15"
+denominator = "1"
+[tera]
+aliases = ["T"]
+numerator = "10^12"
+denominator = "1"
+[giga]
+aliases = ["G"]
+numerator = "10^9"
+denominator = "1"
+[mega]
+aliases = ["M"]
+numerator = "10^6"
+denominator = "1"
+[kilo]
+aliases = ["k"]
+numerator = "10^3"
+denominator = "1"
+[hecto]
+aliases = ["h"]
+numerator = "10^2"
+denominator = "1"
+[deca]
+aliases = ["da"] 
+numerator = "10^1"
+denominator = "1"
+[deci]
+aliases = ["d"]
+numerator = "1" 
+denominator = "10^1"
+[centi]
+aliases = ["c"]
+numerator = "1" 
+denominator = "10^2"
+[milli]
+aliases = ["m"]
+numerator = "1" 
+denominator = "10^3"
+[micro]
+aliases = ["μ"]
+numerator = "1" 
+denominator = "10^6"
+[nano]
+aliases = ["n"]
+numerator = "1" 
+denominator = "10^9"
+[pico]
+aliases = ["p"]
+numerator = "1" 
+denominator = "10^12"
+[femto]
+aliases = ["f"]
+numerator = "1" 
+denominator = "10^15"
+[atto]
+aliases = ["a"]
+numerator = "1" 
+denominator = "10^18"
+[zepto]
+aliases = ["z"]
+numerator = "1" 
+denominator = "10^21"
+[yocto]
+aliases = ["y"]
+numerator = "1" 
+denominator = "10^24"
+[ronto]
+aliases = ["r"]
+numerator = "1" 
+denominator = "10^27"
+[quecto]
+aliases = ["q"]
+numerator = "1" 
+denominator = "10^30"

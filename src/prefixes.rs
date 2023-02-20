@@ -43,112 +43,123 @@ use crate::{BaseUnit, Rational128};
 
 //prefix!(yotta | y, 10^24 , 1);
 
-
-
-prefix!(yotta, 10^24, 1);
-prefix!(zetta, 10^21, 1);
-prefix!(exa10, 10^18, 1);
-prefix!(peta, 10^15, 1);
-prefix!(tera, 10^12, 1);
-prefix!(giga, 10^9, 1);
-prefix!(mega, 10^6, 1);
-prefix!(kilo, 10^3, 1);
-prefix!(hecto, 10^2, 1);
-prefix!(deca, 10^1, 1);
+prefix!(quetta|Q, 10^30, 1);
+prefix!(ronna|R, 10^27, 1);
+prefix!(yotta|Y, 10^24, 1);
+prefix!(zetta|Z, 10^21, 1);
+prefix!(exa|E, 10^18, 1);
+prefix!(peta|P, 10^15, 1);
+prefix!(tera|T, 10^12, 1);
+prefix!(giga|G, 10^9, 1);
+prefix!(mega|M, 10^6, 1);
+prefix!(kilo|k, 10^3, 1);
+prefix!(hecto|h, 10^2, 1);
+prefix!(deca|da, 10^1, 1);
 prefix!(none, 1, 1);
-prefix!(deci, 1, 10^1);
-prefix!(centi, 1, 10^2);
-prefix!(milli, 1, 10^3);
-prefix!(micro, 1, 10^6);
-prefix!(nano, 1, 10^9);
-prefix!(pico, 1, 10^12);
-prefix!(femto, 1, 10^15);
-prefix!(atto, 1, 10^18);
-prefix!(zepto, 1, 10^21);
-prefix!(yocto, 1, 10^24);
+prefix!(deci|d, 1, 10^1);
+prefix!(centi|c, 1, 10^2);
+prefix!(milli|m, 1, 10^3);
+prefix!(micro|μ, 1, 10^6);
+prefix!(nano|n, 1, 10^9);
+prefix!(pico|p, 1, 10^12);
+prefix!(femto|f, 1, 10^15);
+prefix!(atto|a, 1, 10^18);
+prefix!(zepto|z, 1, 10^21);
+prefix!(yocto|y, 1, 10^24);
+prefix!(ronto|r, 1, 10^27);
+prefix!(quecto|q, 1, 10^30);
 
-// // Binary prefixes.into();
-// prefix!(yobi, 1024^8, 1);
-// prefix!(zebi, 1024^7, 1);
-// prefix!(exbi, 1024^6, 1);
-// prefix!(pebi, 1024^5, 1);
-// prefix!(tebi, 1024^4, 1);
-// prefix!(gibi, 1024^3, 1);
-// prefix!(mebi, 1024^2, 1);
-// prefix!(kibi, 1024^1, 1);
-// ^
-//prefix!(none, 1, 1);
+// Binary prefixes
+prefix!(yobi, 1024^8, 1);
+prefix!(zebi, 1024^7, 1);
+prefix!(exbi, 1024^6, 1);
+prefix!(pebi, 1024^5, 1);
+prefix!(tebi, 1024^4, 1);
+prefix!(gibi, 1024^3, 1);
+prefix!(mebi, 1024^2, 1);
+prefix!(kibi, 1024^1, 1);
+
 
 impl Display for BaseUnit {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        // if *self == yotta {
-        //     return write!(f, "yotta");
-        // }
-        // if *self == yotta {
-        //     return write!(f, "yotta");
-        // }
-        // if *self == zetta {
-        //     return write!(f, "zetta");
-        // }
-        // if *self == exa {
-        //     return write!(f, "exa ");
-        // }
-        // if *self == peta {
-        //     return write!(f, "peta");
-        // }
-        // if *self == tera {
-        //     return write!(f, "tera");
-        // }
-        // if *self == giga {
-        //     return write!(f, "giga");
-        // }
-        // if *self == mega {
-        //     return write!(f, "mega");
-        // }
-        // if *self == kilo {
-        //     return write!(f, "kilo");
-        // }
-        // if *self == hecto {
-        //     return write!(f, "hecto");
-        // }
-        // if *self == deca {
-        //     return write!(f, "deca");
-        // }
-        // if *self == none {
-        //     return write!(f, "");
-        // }
-        // if *self == deci {
-        //     return write!(f, "deci");
-        // }
-        // if *self == centi {
-        //     return write!(f, "centi");
-        // }
-        // if *self == milli {
-        //     return write!(f, "milli");
-        // }
-        // if *self == micro {
-        //     return write!(f, "micro");
-        // }
-        // if *self == nano {
-        //     return write!(f, "nano");
-        // }
-        // if *self == pico {
-        //     return write!(f, "pico");
-        // }
-        // if *self == femto {
-        //     return write!(f, "femto");
-        // }
-        // if *self == atto {
-        //     return write!(f, "atto");
-        // }
-        // if *self == zepto {
-        //     return write!(f, "zepto");
-        // }
-        // if *self == yocto {
-        //     return write!(f, "yocto");
-        // }
-        // else
-        let ratio: Rational128 = (*self).into();
-        write!(f, "{}", ratio)
+    fn fmt(&self, fmt: &mut fmt::Formatter<'_>) -> fmt::Result {
+        if *self == quetta {
+            return write!(fmt, "quetta")
+        }
+        if *self == ronna {
+            return write!(fmt, "ronna")
+        }
+        if *self == yotta {
+            return write!(fmt, "yotta")
+        }
+        if *self == zetta {
+            return write!(fmt, "zetta")
+        }
+        if *self == exa {
+            return write!(fmt, "exa ")
+        }
+        if *self == peta {
+            return write!(fmt, "peta")
+        }
+        if *self == tera {
+            return write!(fmt, "tera")
+        }
+        if *self == giga {
+            return write!(fmt, "giga")
+        }
+        if *self == mega {
+            return write!(fmt, "mega")
+        }
+        if *self == kilo {
+            return write!(fmt, "kilo")
+        }
+        if *self == hecto {
+            return write!(fmt, "hecto")
+        }
+        if *self == deca {
+            return write!(fmt, "deca")
+        }
+        if *self == none {
+            return write!(fmt, "")
+        }
+        if *self == deci {
+            return write!(fmt, "deci")
+        }
+        if *self == centi {
+            return write!(fmt, "centi")
+        }
+        if *self == milli {
+            return write!(fmt, "milli")
+        }
+        if *self == micro {
+            return write!(fmt, "micro")
+        }
+        if *self == nano {
+            return write!(fmt, "nano")
+        }
+        if *self == pico {
+            return write!(fmt, "pico")
+        }
+        if *self == femto {
+            return write!(fmt, "femto")
+        }
+        if *self == atto {
+            return write!(fmt, "atto")
+        }
+        if *self == zepto {
+            return write!(fmt, "zepto")
+        }
+        if *self == yocto {
+            return write!(fmt, "yocto")
+        }
+        if *self == ronto {
+            return write!(fmt, "ronto")
+        }
+        if *self == quecto {
+            return write!(fmt, "quecto")
+        }
+        else {
+            let ratio: Rational128 = (*self).into();
+            return write!(fmt, "{}", ratio)
+        }
     }
 }

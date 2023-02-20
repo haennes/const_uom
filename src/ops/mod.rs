@@ -13,7 +13,7 @@ use crate::One;
 use crate::PseudoFromRational128;
 use crate::Quantity;
 pub use crate::Rational128;
-use crate::SiUnit;
+use crate::SiUnitExt;
 use std::fmt::Display;
 use std::ops;
 

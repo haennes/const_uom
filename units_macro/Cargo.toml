@@ -13,3 +13,5 @@ syn = {version = "*", features = ["extra-traits","derive", "full"]}
 quote = "1.0"
 proc-macro2 = "*"
 itertools = "*"
+heapless = "*"
+common_serde = {path = "../common_serde"}

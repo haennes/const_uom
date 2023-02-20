@@ -1,0 +1,12 @@
+/home/hannses/programming/const_uom/common_serde/target/debug/deps/half-d757bd2acf15bca0.rmeta: /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/lib.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/bfloat.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/bfloat/convert.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/binary16.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/binary16/convert.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/slice.rs
+
+/home/hannses/programming/const_uom/common_serde/target/debug/deps/libhalf-d757bd2acf15bca0.rlib: /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/lib.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/bfloat.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/bfloat/convert.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/binary16.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/binary16/convert.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/slice.rs
+
+/home/hannses/programming/const_uom/common_serde/target/debug/deps/half-d757bd2acf15bca0.d: /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/lib.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/bfloat.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/bfloat/convert.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/binary16.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/binary16/convert.rs /home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/slice.rs
+
+/home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/lib.rs:
+/home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/bfloat.rs:
+/home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/bfloat/convert.rs:
+/home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/binary16.rs:
+/home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/binary16/convert.rs:
+/home/hannses/.cargo/registry/src/github.com-1ecc6299db9ec823/half-1.8.2/src/slice.rs:

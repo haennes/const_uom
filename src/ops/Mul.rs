@@ -1,10 +1,10 @@
-//use units_macro::replace_for;
+use units_macro::replace_for;
 
 use crate::PseudoMul;
 
 use super::*;
 
-impl<const U: SiUnit, DT, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit> ops::Mul<DT>
+impl<const U: SiUnitExt, DT, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit> ops::Mul<DT>
     for Quantity<U, DT, BASE, STORAGE_BASE, true>
 where
     DT: QuantityDataTraits<DT>,
@@ -17,7 +17,7 @@ where
     }
 }
 
-impl<const U: SiUnit, DT, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit> ops::Mul<DT>
+impl<const U: SiUnitExt, DT, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit> ops::Mul<DT>
     for Quantity<U, DT, BASE, STORAGE_BASE, false>
 where
     DT: QuantityDataTraits<DT>,
@@ -40,23 +40,23 @@ where
 //type DT = f64;
 
 // TODO: fix this to work with normal code not with stringliterals
-// replace_for!(f32|f64|i32, ("impl<const U: SiUnit, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit> ops::Mul<Quantity<U, REPLACE, BASE, STORAGE_BASE>> for REPLACE where
-//     REPLACE: QuantityDataTraits<REPLACE>,
-// {
-//     type Output = Quantity<U, REPLACE, BASE, STORAGE_BASE, true>;
+replace_for!(f32|f64|i32, ("impl<const U: SiUnitExt, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit> ops::Mul<Quantity<U, REPLACE, BASE, STORAGE_BASE>> for REPLACE where
+    REPLACE: QuantityDataTraits<REPLACE>,
+{
+    type Output = Quantity<U, REPLACE, BASE, STORAGE_BASE, true>;
 
-//     fn mul(self, rhs: Quantity<U, REPLACE, BASE, STORAGE_BASE>) -> Self::Output {
-//         Quantity {
-//             raw_value: self * rhs.raw_value,
-//         }
-//     }
+    fn mul(self, rhs: Quantity<U, REPLACE, BASE, STORAGE_BASE>) -> Self::Output {
+        Quantity {
+            raw_value: self * rhs.raw_value,
+        }
+    }
 
-// }"
-// ));
+}"
+));
 
 impl<
-        const UL: SiUnit,
-        const UR: SiUnit,
+        const UL: SiUnitExt,
+        const UR: SiUnitExt,
         DT,
         const BASE: BaseUnit,
         const STORAGE_BASE: BaseUnit,
@@ -76,8 +76,8 @@ where
 }
 
 impl<
-        const UL: SiUnit,
-        const UR: SiUnit,
+        const UL: SiUnitExt,
+        const UR: SiUnitExt,
         DT,
         const BASE: BaseUnit,
         const STORAGE_BASE: BaseUnit,

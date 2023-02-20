@@ -1,6 +1,6 @@
 use std::fmt::{self, Display};
 
-use crate::{ops::QuantityDataTraits, BaseUnit, Quantity, SiUnit};
+use crate::{ops::QuantityDataTraits, BaseUnit, Quantity, SiUnitExt};
 
 pub trait DisplayUnitBase {
     fn u_fmt(&self, base: BaseUnit) -> String ;
@@ -8,23 +8,22 @@ pub trait DisplayUnitBase {
 
 ///because you cant implement a trait for a certain value
 ///you have to implement it for UnitSpecialization<value> instead
-pub struct UnitSpecialization<const U: SiUnit>;
+pub struct UnitSpecialization<const U: SiUnitExt>;
 
-default impl<const U: SiUnit> DisplayUnitBase for UnitSpecialization<U> {
+default impl<const U: SiUnitExt> DisplayUnitBase for UnitSpecialization<U> {
     fn u_fmt(&self, base: BaseUnit) -> String {
         format!("(unit {} in base {} )",U, base)
     }
 }
 
-pub trait DisplayQuantityInitialized<const U: SiUnit, DT: QuantityDataTraits<DT>>
-//where UnitSpecialization<U>: DisplayUnitBase
+pub trait DisplayQuantityInitialized<const U: SiUnitExt, DT: QuantityDataTraits<DT>>
 {
     fn q_fmt(base: BaseUnit, storage_base: BaseUnit, value: &DT) -> String;
 }
 
 
 
-impl<const U: SiUnit, DT, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit>
+impl<const U: SiUnitExt, DT, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit>
     DisplayQuantityInitialized<U, DT> for Quantity<U, DT, BASE, STORAGE_BASE, true>
 where
     DT: QuantityDataTraits<DT>,
@@ -40,7 +39,7 @@ where
     }
 }
 
-impl<const U: SiUnit, DT, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit> Display
+impl<const U: SiUnitExt, DT, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit> Display
     for Quantity<U, DT, BASE, STORAGE_BASE, true>
 where
     DT: QuantityDataTraits<DT>,
@@ -54,7 +53,7 @@ where
     }
 }
 
-impl<const U: SiUnit, DT, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit> Display
+impl<const U: SiUnitExt, DT, const BASE: BaseUnit, const STORAGE_BASE: BaseUnit> Display
     for Quantity<U, DT, BASE, STORAGE_BASE, false>
 where
     DT: QuantityDataTraits<DT>,

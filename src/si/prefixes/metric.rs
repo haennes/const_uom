@@ -1,0 +1,27 @@
+use units_macro::prefix;
+use crate::{BaseUnit, Rational128};
+
+prefix!(atto|a,1,10^18);
+prefix!(centi|c,1,10^2);
+prefix!(deca|da,10^1,1);
+prefix!(deci|d,1,10^1);
+prefix!(exa|E,10^18,1);
+prefix!(femto|f,1,10^15);
+prefix!(giga|G,10^9,1);
+prefix!(hecto|h,10^2,1);
+prefix!(kilo|k,10^3,1);
+prefix!(mega|M,10^6,1);
+prefix!(micro|μ,1,10^6);
+prefix!(milli|m,1,10^3);
+prefix!(nano|n,1,10^9);
+prefix!(peta|P,10^15,1);
+prefix!(pico|p,1,10^12);
+prefix!(quecto|q,1,10^30);
+prefix!(quetta|Q,10^30,1);
+prefix!(ronna|R,10^27,1);
+prefix!(ronto|r,1,10^27);
+prefix!(tera|T,10^12,1);
+prefix!(yocto|y,1,10^24);
+prefix!(yotta|Y,10^24,1);
+prefix!(zepto|z,1,10^21);
+prefix!(zetta|Z,10^21,1);
